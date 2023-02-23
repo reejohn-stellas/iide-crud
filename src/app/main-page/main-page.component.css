@@ -1,0 +1,9 @@
+form {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 80vw;
+    margin: 100px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}

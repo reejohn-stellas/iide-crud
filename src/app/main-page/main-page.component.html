@@ -1,0 +1,25 @@
+<form [formGroup]="mainform">
+    <h1>Create Task</h1>
+    <input type="text" placeholder="write task" class="form-control" formControlName="task_name">
+    <input type="text" placeholder="write on what time your going to di it" class="form-control" formControlName="task_time">
+    <button class="btn btn-dark" (click)="create()">Create Task</button>
+
+</form>
+<br><br>
+<h1>Already Added Task</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">name</th>
+            <th scope="col">time</th>
+            <th scope="col">actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let task of data">
+            <td>{{task.name}}</td>
+            <td>{{task.time}}</td>
+            <td><button class="btn btn-dark" (click)="delete(task)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
